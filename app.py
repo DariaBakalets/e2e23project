@@ -2,6 +2,7 @@ import pandas as pandas
 from flask import Flask, request
 import joblib
 import numpy
+import pandas as pd
 
 MODEL_PATH = 'mlmodels/model.pkl'
 
