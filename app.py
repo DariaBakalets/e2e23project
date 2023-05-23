@@ -21,8 +21,9 @@ def predict():
     offer_time = args.get('offer_time', default=-1, type=int)
     agent_fee = args.get('agent_fee', default=-1, type=float)
 
-    x = numpy.array([open_plan, rooms, area, renovation, floor, studio, offer_time, agent_fee]).reshape((1, -1))
-    result = model.predict(x)
+    x = numpy.array([open_plan, rooms, area, renovation, floor, studio, offer_time, agent_fee]).reshape(1, -1)
+    df = pd.DataFrame(data=x)
+    result = model.predict(df)
 
     return str(result[0][0])
 
