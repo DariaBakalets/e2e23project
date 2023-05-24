@@ -2,7 +2,6 @@ import pandas as pandas
 from flask import Flask, request
 import joblib
 import numpy
-import pandas as pd
 
 MODEL_PATH = 'mlmodels/model.pkl'
 
@@ -16,15 +15,16 @@ def predict():
     open_plan = args.get('open_plan', default=-1, type=int)
     rooms = args.get('rooms', default=-1, type=int)
     area = args.get('area', default=-1, type=float)
-    renovation = args.get('renovation', default=-1, type=float)
+    renovation = args.get('renovation', default=-1, type=int)
     floor = args.get('floor', default=-1, type=int)
     studio = args.get('studio', default=-1, type=int)
     offer_time = args.get('offer_time', default=-1, type=int)
-    agent_fee = args.get('agent_fee', default=-1, type=float)
 
-    x = numpy.array([open_plan, rooms, area, renovation, floor, studio, offer_time, agent_fee]).reshape(1, -1)
-    df = pd.DataFrame(data=x)
-    result = model.predict(df)
+
+    x = numpy.array([open_plan, rooms, area, renovation, floor, studio, offer_time]).reshape(1, -1)
+    x = sc_x.transform(x)
+    result = model.predict(x)
+    result = sc_y.inverse_transform(result.reshape(1, -1))
 
     return str(result[0][0])
 
