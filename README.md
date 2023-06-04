@@ -146,7 +146,7 @@ Next, pull the files from the repository and install the necessary requirements 
 
 To allow access to the port used in the application, run `sudo ufw allow 5444` (5444 - the port number). Then, we can start the application by running `python3 app.py`.
 
-For testing the application, we can use [Postman](https://www.postman.com/), an HTTP request tool. Create a new request and specify our public IP address `<public_IP>:6262` and the port with `/predict_price`. 
+For testing the application, we can use [Postman](https://www.postman.com/), an HTTP request tool. Create a new request and specify our public IP address `<public_IP>:5444` and the port with `/predict_price`. 
 
 In the request body, include the following parameters in this order:
 * open_plan (0 or 1)
