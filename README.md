@@ -12,7 +12,7 @@ These are the **variables** from the dataset I used in further analysis (includi
 ![AllVars](materials/AllVars.png)
 
 We can notice that there are missing values for `living_area`, `kitchen_area`, `agent_fee` and `renovation`. 
-What is more, some variables had wrong datatypes: e.g. variable `open_plan` should be transfomed from boolean to integer and `renovation` from float to integer. It has been done further in the analysis.
+What is more, some variables had wrong datatypes: e.g. variable `open_plan` should be transfomed from boolean to integer and `renovation` from float to integer. It was done further in the analysis.
 
 Then, it is important to dig deeper into the dataset with the help of some visualisation.
 
