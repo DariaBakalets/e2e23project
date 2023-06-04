@@ -11,9 +11,10 @@ These are the **variables** from the dataset I used in further analysis (includi
 
 ![AllVars](materials/AllVars.png)
 
-We can notice that there are missing values for `living_area`, `kitchen_area`, `agent_fee` and `renovation`. What is more, some variables have wrong datatypes: e.g. variable `open_plan` should be transfomed from boolean to integer and `renovation` from float to integer. It has been done further in the analysis.
+We can notice that there are missing values for `living_area`, `kitchen_area`, `agent_fee` and `renovation`. 
+What is more, some variables had wrong datatypes: e.g. variable `open_plan` should be transfomed from boolean to integer and `renovation` from float to integer. It has been done further in the analysis.
 
-Further, it is important to dig deeper into the dataset with the help of some visualisation.
+Then, it is important to dig deeper into the dataset with the help of some visualisation.
 
 #### Histogram of price
 Here we can see that `last_price` is right-skewed which resembles a log-normal distribution. 
@@ -194,7 +195,7 @@ Run `docker pull dariabakalets/e2e23project` to pull the container to our machin
 Then, use the command `docker run -dp 5444:5444 dariabakalets/e2e23project` to run the container. 
 The same port as in application.
 
-Again, go to [Postman](https://www.postman.com/) and specify our HTTP-request, see 4.
+Again, go to [Postman](https://www.postman.com/) and specify our HTTP-request, see 3.
 
 #### P. S.
 My application is avaliable by the following request:
